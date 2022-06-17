@@ -67,9 +67,9 @@ function addBtnClick() {
         name: newMemberName,
         role: newMemberRole
     };
-    teamMembers.push(newMember)
+    teamMembers.push(newMember);
 
-    allMembersCard(newMember)
+    singleMemberCard(newMember);
 }
 
 // PER OGNI ELEMENTO DELL'ARRAY CHIAMA LA FUNZIONE CHE CREA LA CARD
@@ -78,7 +78,7 @@ function allMembersCard(membersObjectArray) {
         const thisMember = membersObjectArray[i];    
         
         // chiama la funzione che crea la card
-        singleMemberCard(thisMember)
+        singleMemberCard(thisMember);
     }
 }
 
