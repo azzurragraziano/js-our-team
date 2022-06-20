@@ -9,69 +9,67 @@ Utilizzare gli input presenti nella pagina per permettere all'utente di aggiunge
 const teamMembers = [
     // Wayne Barnett
     {
-        image: 'img/wayne-barnett-founder-ceo.jpg',
+        image: 'wayne-barnett-founder-ceo.jpg',
         name: 'Wayne Barnett',
         role: 'Founder & CEO'
     },
 
     // Angela Caroll
     {
-        image: 'img/angela-caroll-chief-editor.jpg',
+        image: 'angela-caroll-chief-editor.jpg',
         name: 'Angela Caroll',
         role: 'Chief Editor'
     },
 
     // Walter Gordon
     {
-        image: 'img/walter-gordon-office-manager.jpg',
+        image: 'walter-gordon-office-manager.jpg',
         name: 'Walter Gordon',
         role: 'Office Manager'
     },
 
     // Angela Lopez
     {
-        image: 'img/angela-lopez-social-media-manager.jpg',
+        image: 'angela-lopez-social-media-manager.jpg',
         name: 'Angela Lopez',
         role: 'Social Media Manager'
     },
 
     // Scott Estrada
     {
-        image: 'img/scott-estrada-developer.jpg',
+        image: 'scott-estrada-developer.jpg',
         name: 'Scott Estrada',
         role: 'Developer'
     },
 
     // Barbara Ramos
     {
-        image: 'img/barbara-ramos-graphic-designer.jpg',
+        image: 'barbara-ramos-graphic-designer.jpg',
         name: 'Barbara Ramos',
         role: 'Graphic Designer'
     }
 ];
 
 const teamContainer = document.querySelector('.team-container');
-console.log(teamContainer);
 
 // per ogni membro presente nell'array
 for(let i = 0; i < teamMembers.length; i++) {
     const thisMember = teamMembers[i];
-    console.log(thisMember);
 
     // stampo una card
     const card = `
     <div class="team-card">
-            <div class="card-image">
-              <img
-                src="${thisMember.image}"
-                alt="Wayne Barnett"
-              />
-            </div>
-            <div class="card-text">
-              <h3>${thisMember.name}</h3>
-              <p>${thisMember.role}</p>
-            </div>
-          </div>
+        <div class="card-image">
+            <img
+            src="img/${thisMember.image}"
+            alt="${thisMember.name}"
+            />
+        </div>
+        <div class="card-text">
+            <h3>${thisMember.name}</h3>
+            <p>${thisMember.role}</p>
+        </div>
+        </div>
     `;
 
     // e la concateno a teamContainer
